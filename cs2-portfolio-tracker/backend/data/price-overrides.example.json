@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy this file to price-overrides.json and fill it with prices you trust (e.g. read off the CS2Trader extension's inventory valuation). Remove the _comment key - it is ignored, but keeping the file valid JSON matters.",
+  "AK-47 | Redline (Field-Tested)": 14.32,
+  "AWP | Asiimov (Battle-Scarred)": 41.00,
+  "Karambit | Doppler (Factory New)": 920.50
+}
