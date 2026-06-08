@@ -1,0 +1,20 @@
+{
+  "name": "cs2-portfolio-backend",
+  "version": "0.1.0",
+  "description": "Backend for the CS2 inventory portfolio tracker: price/float syncing, manipulation alerts, and a Claude-powered chat agent for managing trades",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3"
+  },
+  "license": "MIT"
+}
