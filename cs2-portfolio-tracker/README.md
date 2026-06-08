@@ -42,16 +42,34 @@ casual (igual que su extensión "CSFloat Market Checker").
 - Opcional: clave de [Anthropic](https://console.anthropic.com/) para el chat con Claude
 - Opcional: webhook de Discord para recibir alertas
 
-## Backend
+## Puesta en marcha
+
+### La forma rápida: script de instalación
+
+```bash
+cd cs2-portfolio-tracker
+./setup.sh
+```
+
+Te pregunta solo lo esencial (tu SteamID64 y tu clave de Anthropic - ambas
+opcionales si prefieres configurarlas después), genera `backend/.env`, instala
+las dependencias del backend y del frontend, y al final te dice exactamente
+cómo arrancar los dos servidores.
+
+¿Estás en una sesión de **Claude Code**? Solo dile algo como **"arranca mi
+portfolio tracker"** - sabe cómo instalarlo y correrlo por ti sin que tengas
+que tocar la terminal ni clonar nada manualmente (ver `CLAUDE.md`).
+
+### La forma manual
 
 ```bash
 cd backend
-cp .env.example .env   # edita con tus datos (ver abajo)
+cp .env.example .env   # edita con tus datos (ver tabla abajo)
 npm install
 npm run dev            # http://localhost:3001
 ```
 
-Variables de entorno relevantes (`backend/.env`, ver `.env.example` para la lista completa):
+Variables de entorno relevantes (`backend/.env`, ver `.env.example` para la lista completa y para cuáles son esenciales/opcionales/avanzadas):
 
 | Variable | Para qué sirve |
 | --- | --- |

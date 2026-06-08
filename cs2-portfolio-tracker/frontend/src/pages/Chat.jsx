@@ -59,16 +59,31 @@ export default function Chat() {
   return (
     <div className="flex flex-col h-[calc(100vh-12rem)]">
       <h1 className="text-xl font-semibold mb-1">Chat con Claude</h1>
-      <p className="text-xs text-gray-500 mb-4">
-        Cuéntale en lenguaje natural qué compraste, vendiste o intercambiaste - él registra la
-        operación y actualiza tu portafolio automáticamente. También puede consultar tu resumen,
-        historial y precios.
-      </p>
+      <div className="text-xs text-gray-500 mb-4 space-y-1.5">
+        <p>
+          No es un formulario - escríbele como le contarías a un amigo qué hiciste con tu
+          inventario. Aquí Claude puede:
+        </p>
+        <ul className="space-y-1 pl-4 list-disc marker:text-purple-500">
+          <li>
+            <span className="text-gray-300">Registrar tus operaciones</span> y dejar tus
+            holdings al día en el mismo mensaje (compras, ventas, trades).
+          </li>
+          <li>
+            <span className="text-gray-300">Corregir o borrar</span> algo que registraste mal -
+            solo dile qué cambiar.
+          </li>
+          <li>
+            <span className="text-gray-300">Responder preguntas</span> sobre tu resumen, tus
+            ganancias o el historial de precios de un objeto.
+          </li>
+        </ul>
+      </div>
 
       <div className="flex-1 overflow-y-auto rounded-xl border border-gray-800 bg-gray-900/40 p-4 space-y-3">
         {messages.length === 0 && (
           <div className="space-y-2">
-            <p className="text-sm text-gray-500">Prueba con algo como:</p>
+            <p className="text-sm font-medium text-gray-300">👉 Prueba alguno de estos ejemplos para empezar:</p>
             {SUGGESTIONS.map((s) => (
               <button
                 key={s}
